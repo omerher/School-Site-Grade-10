@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="School_Site_Grade_10.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <ul id="navbar">
+        <li style="float: left;" id="home-button">Home</li>
+        <li style="float: left" id="featured-button">Featured</li>
+        <li style="float: left;" id="top-movies-button">Top Movies</li>
+        <li style="float: left;" id="genres-button">Genres</li>
+
+        <% if (Session["Admin"] == null && Session["Login"] == null)
+            { %>
+                <li style="float: right;" id="register-button">Register</li>
+                <li style="float: right;" id="login-button">Login</li>
+        <% } if (Session["Login"] != null && Session["Admin"] == null)
+           { %>
+                <li style="float: right;" id="log-out-button">Log out</li>
+                <li style="float: right;" id="user-page-button">User Page</li>
+        <% } else if (Session["Admin"] != null && Session["Login"] != null)
+           { %>
+                <li style="float: right;" id="log-out-button">Log out</li>        
+                <li style="float: right;" id="admin-page-button">Admin Page</li>
+        <% } %>
+    </ul>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="app.js"></script>
+</body>
+</html>
