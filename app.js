@@ -97,10 +97,10 @@ function onPageLoad(){
             "toppicks": topMovies,
             "genres": genres,
             "admin": adminPage,
-            "logOut": logOut,
-            "logIn": login,
+            "logout": logOut,
+            "login": login,
             "register": register,
-            "userPage": userPage
+            "userpage": userPage
         }
 
         var idToPageName = {
@@ -109,14 +109,14 @@ function onPageLoad(){
             "top-movies-button": "toppicks",
             "genres-button": "genres",
             "admin-page-button": "admin",
-            "log-out-button": "logOut",
+            "log-out-button": "logout",
             "register-button": "register",
-            "user-page-button": "userPage",
-            "log-in-button": "logIn"
+            "user-page-button": "userpage",
+            "login-button": "login"
         }
 
-        //console.log(str)
-        //console.log(idToPageName[this.id])
+        console.log(str)
+        console.log(idToPageName[this.id])
 
         if (str.includes(idToPageName[this.id])) {
             this.classList.toggle("active")

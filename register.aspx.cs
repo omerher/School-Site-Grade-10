@@ -44,7 +44,7 @@ namespace School_Site_Grade_10
 
                             MyAdoHelper.DoQuery(fileName, sql);
                             Session["message"] = "Registered Succesfully!";
-                            Response.Redirect("LogIn.aspx");
+                            Response.Redirect("index.aspx");
                         }
                         else
                             UserAlreadyExists = "<div class='redContainer'>A user with this username already exists.</div> ";

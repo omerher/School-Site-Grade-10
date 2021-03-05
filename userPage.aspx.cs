@@ -45,7 +45,7 @@ namespace School_Site_Grade_10
                 int length = usersInDB.Rows.Count;
                 if (length > 0)
                 {
-                    userList += "<center><table id='customers'>";
+                    userList += "<center><table class='users-table'>";
                     userList += "<th>Username</th>";
                     userList += "<th>Email</th>";
                     userList += "<th>Gender</th>";

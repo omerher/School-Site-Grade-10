@@ -39,7 +39,7 @@ namespace School_Site_Grade_10
                 {
                     DataTable usersInDB = MyAdoHelper.ExecuteDataTable(fileName, sql);
                     Session["Login"] = Request.Form["uName"];
-                    //Response.Redirect("ProfilePage.aspx");
+                    Response.Redirect("userPage.aspx");
                 }
                 else
                 {
